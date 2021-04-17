@@ -1,4 +1,4 @@
-const map = L.map('map').setView([41.4005362, 2.1523456], 12);
+const map = L.map('map').setView([41.39464, 2.1523456], 12);
 map.scrollWheelZoom.disable();
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png', {
@@ -6,11 +6,11 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.
 }).addTo(map);
 
 const client = new carto.Client({
-  apiKey: 'nn6pGNyk_3tkMmCqIPAO-w',
+  apiKey: 'UQlY6V12zUzgabxvaJAobA',
   username: 'cdbsol-admin'
 });
 
-const source = new carto.source.SQL('SELECT g.* FROM gecat_geodata g tablesample system(20) ORDER BY ord DESC');
+const source = new carto.source.SQL('SELECT cartodb_id, the_geom_webmercator, net_type, speed, fullcarrier_clean, ord FROM gecat_geodata_sample ORDER BY ord DESC');
 
 const style = new carto.style.CartoCSS(`
   @blg: #027091; 
@@ -20,7 +20,7 @@ const style = new carto.style.CartoCSS(`
   @pur: #7400b7; 
 
   #layer {
-    marker-width: .75;
+    marker-width: .7;
     marker-fill: @pur;
     marker-fill-opacity: 1;
     marker-allow-overlap: true;
