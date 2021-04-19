@@ -1,5 +1,5 @@
 # sql-dot-density
-* UPDATE: deck.gl vs CARTO.js rendering/color comparison
+* UPDATE: deck.gl vs CARTO.js rendering/color/zoom level styling comparison
   * [deck.gl cartography example](https://github.com/ztephm/sql-dot-density/tree/main/deckgl)
   
     <img width="1167" alt="deckgl_dd" src="https://user-images.githubusercontent.com/1779444/115293246-50167900-a114-11eb-91af-b12691589ddf.png">
